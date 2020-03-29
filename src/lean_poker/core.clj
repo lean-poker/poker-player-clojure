@@ -37,6 +37,11 @@
        :headers {"Content-Type" "text/html"}
        :body    (str player/version)})
 
+    "check"
+    {:status  200
+     :headers {"Content-Type" "text/html"}
+     :body    "OK"}
+
     (do
       (log/warn "Bad request" req)
       {:status 400})))
